@@ -1,0 +1,18 @@
+# fly.toml app configuration file generated for restless-sun-6234 on 2023-07-25T14:04:41+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "restless-sun-6234"
+primary_region = "ams"
+
+[env]
+  PORT = "8080" # add this
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 8080 
+  processes = ["app"]
